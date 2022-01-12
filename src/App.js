@@ -1,16 +1,20 @@
-import React from 'react';
-import { ListItem } from './components/ListItem';
-import { TaskField } from './components/TaskField';
+import React from "react";
+import { ListItem } from "./components/ListItem";
+import { TaskField } from "./components/TaskField";
 
 function App() {
   const [tasks, setTasks] = React.useState([
     {
-      text: 'Изучить ReactJS',
+      text: "Изучить ReactJS",
       completed: true,
     },
     {
-      text: 'Разработать ToDo на ReactJS',
+      text: "Разработать ToDo на ReactJS",
       completed: false,
+    },
+    {
+      text: "Деплой реакт приложения ",
+      completed: true,
     },
   ]);
 
@@ -22,8 +26,8 @@ function App() {
               ...task,
               completed: !task.completed,
             }
-          : task,
-      ),
+          : task
+      )
     );
   };
 
